@@ -6,9 +6,9 @@ function Register() {
     <>
       <a
         href="/FormularioRegistro"
-        className="button blanco link-underline-opacity-0 link-offset-2 link-underline"
+        className="button blanco link-underline-opacity-0 link-offset-2 link-underline w-equal"
       >
-        Regístrate gratis
+        Regístrate ahora
         <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
           <path
             fillRule="evenodd"

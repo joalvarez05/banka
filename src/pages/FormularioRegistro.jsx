@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { formatDate } from "@/utils/formatDate";
-
+import Swal from "sweetalert2";
 function FormularioRegistro() {
+  const [usuario, setUsuario] = useState(false);
+
   const maxDate = formatDate();
 
   const {
@@ -15,11 +17,32 @@ function FormularioRegistro() {
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,16}$/;
 
   const onSubmit = (data) => {
-    console.log(data);
+    const usuariosExistentes =
+      JSON.parse(localStorage.getItem("usuarios")) || [];
+    const usuariosActualizados = [...usuariosExistentes, data];
+
+    localStorage.setItem("usuarios", JSON.stringify(usuariosActualizados));
+    setUsuario(!usuario);
   };
-  const handleInput = (e) => {
+
+  const validarNumInput = (e) => {
     e.target.value = e.target.value.replace(/[^0-9]/g, "");
   };
+
+  useEffect(() => {
+    if (usuario) {
+      Swal.fire({
+        title: "Welcome to Banka!",
+        text: "Now you have to wait between 24 and 48 hours for us to enable your account.",
+        icon: "success",
+        confirmButtonText: "Home",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = "/";
+        }
+      });
+    }
+  }, [usuario]);
 
   return (
     <>
@@ -127,7 +150,7 @@ function FormularioRegistro() {
               pattern="[0-9]*"
               inputMode="numeric"
               id="dni"
-              onInput={handleInput}
+              onInput={validarNumInput}
               {...register("dni", {
                 required: true,
                 minLength: {
@@ -206,8 +229,8 @@ function FormularioRegistro() {
           </a>
           <span> de Banka.</span>
         </form>
+        {usuario && <p></p>}
       </div>
-
     </>
   );
 }

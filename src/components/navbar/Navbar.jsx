@@ -23,7 +23,7 @@ function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse " id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item custom-dropdown">
                 <a
@@ -92,12 +92,10 @@ function Navbar() {
                 </a>
               </li>
             </ul>
-          </div>
-          <div className="me-2">
-            <Login />
-          </div>
-          <div className="ms-2">
-            <Register />
+            <div className="me-2 boton-sm">
+              <Login />
+              <Register />
+            </div>
           </div>
         </div>
       </nav>

@@ -51,9 +51,9 @@ body {
   font-family: sans-serif;
 }
 .fst-italic {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
-  color: red !important;
+  color: rgb(234, 75, 75) !important;
   max-width: 350px;
   line-height: 1.6;
   word-wrap: break-word;
