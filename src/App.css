@@ -62,3 +62,50 @@ body {
 input::placeholder {
   color: var(--color-verde2) !important;
 }
+
+/* Estilos del HOME */
+.wrap {
+  border-radius: 100% 0% 0% 100% / 100% 40% 60% 0%;
+  border: 500px solid var(--color-morado1);
+}
+
+.background-section {
+  background-color: var(--color-verde2);
+  width: 100% !important;
+  color: var(--color-negro);
+}
+
+.icono {
+  background-color: rgba(224, 224, 224, 0.809);
+  border-radius: 50%;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.above-img {
+  position: absolute;
+  top: 70%;
+  left: 56.5%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 150%;
+  animation: movimiento 2s ease-in-out infinite; /* Aplica la animación */
+}
+
+@keyframes movimiento {
+  0% {
+    transform: translate(
+      -50%,
+      -40%
+    ); /* Posición inicial ligeramente más abajo */
+  }
+  50% {
+    transform: translate(-50%, -50%); /* Posición en el centro */
+  }
+  100% {
+    transform: translate(-50%, -40%); /* Vuelve a la posición inicial */
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./navbar.css";
-import logo from "@/assets/img/logo.webp";
+import logo from "@/assets/img/logo64.png";
 import Login from "../login/Login";
 import Register from "../registro/Registro";
 

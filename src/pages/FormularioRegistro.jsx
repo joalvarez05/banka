@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { formatDate } from "@/utils/formatDate";
 import Swal from "sweetalert2";
-function FormularioRegistro() {
-  const [usuario, setUsuario] = useState(false);
 
+function FormularioRegistro() {
+  const [successRegister, setSuccessRegister] = useState(false);
   const maxDate = formatDate();
 
   const {
@@ -22,7 +22,7 @@ function FormularioRegistro() {
     const usuariosActualizados = [...usuariosExistentes, data];
 
     localStorage.setItem("usuarios", JSON.stringify(usuariosActualizados));
-    setUsuario(!usuario);
+    setSuccessRegister(!successRegister);
   };
 
   const validarNumInput = (e) => {
@@ -30,7 +30,7 @@ function FormularioRegistro() {
   };
 
   useEffect(() => {
-    if (usuario) {
+    if (successRegister) {
       Swal.fire({
         title: "Welcome to Banka!",
         text: "Now you have to wait between 24 and 48 hours for us to enable your account.",
@@ -42,7 +42,7 @@ function FormularioRegistro() {
         }
       });
     }
-  }, [usuario]);
+  }, [successRegister]);
 
   return (
     <>
@@ -229,7 +229,6 @@ function FormularioRegistro() {
           </a>
           <span> de Banka.</span>
         </form>
-        {usuario && <p></p>}
       </div>
     </>
   );
