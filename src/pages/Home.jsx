@@ -4,6 +4,9 @@ import Convert from "@/components/conversor/Convert.jsx";
 import lockLarge from "@/assets/img/lockLarge.webp";
 import inversiones from "@/assets/img/inversiones.svg";
 import rendimiento35 from "@/assets/img/rendimiento35.webp";
+import creditCard from "@/assets/img/creditCardsm.jpg";
+import contactless from "@/assets/img/contactless.jpg";
+import Footer from "@/components/footer/Footer";
 function Home() {
   const sectionRef1 = useRef(null);
   const sectionRef2 = useRef(null);
@@ -96,12 +99,10 @@ function Home() {
                 </h2>
                 <p className="lead ms-2">
                   Cada trimestre, nuestros clientes confían en nosotros para
-                  transferir más de 30 000 millones de libras esterlinas de su
-                  dinero. Estas son algunas de las formas importantes en que los
-                  protegemos.
+                  transferir más de 70.000 millones de pesos de su dinero. Estas
+                  son algunas de las formas importantes en que los protegemos.
                 </p>
                 <a href="#" className="btn btn-md py-2 morado1 mt-4">
-                  {" "}
                   Cómo mantenemos su dinero seguro
                 </a>
               </div>
@@ -144,7 +145,173 @@ function Home() {
             </article>
           </section>
         </motion.div>
+        <motion.div
+          ref={sectionRef2}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView2 ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 4, ease: "easeOut" }}
+        >
+          <section className="py-5 container ">
+            <div className="row gap-3 d-flex justify-content-center mx-2">
+              <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-5">
+                <div className="py-3">
+                  <img
+                    src={creditCard}
+                    alt="credit card"
+                    className="img-fluid rounded-5 img-card"
+                  />
+                </div>
+                <div className="d-flex justify-content-center overlay">
+                  <div className="card">
+                    <div className="card__info">
+                      <div className="card__logo text-end text-dark">VISA</div>
+
+                      <div className="card__chip">
+                        <svg
+                          className="card__chip-lines"
+                          role="img"
+                          width="20px"
+                          height="20px"
+                          viewBox="0 0 100 100"
+                          aria-label="Chip"
+                        >
+                          <g opacity="0.8">
+                            <polyline
+                              points="0,50 35,50"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="2"
+                            ></polyline>
+                            <polyline
+                              points="0,20 20,20 35,35"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="2"
+                            ></polyline>
+                            <polyline
+                              points="50,0 50,35"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="2"
+                            ></polyline>
+                            <polyline
+                              points="65,35 80,20 100,20"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="2"
+                            ></polyline>
+                            <polyline
+                              points="100,50 65,50"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="2"
+                            ></polyline>
+                            <polyline
+                              points="35,35 65,35 65,65 35,65 35,35"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="2"
+                            ></polyline>
+                            <polyline
+                              points="0,80 20,80 35,65"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="2"
+                            ></polyline>
+                            <polyline
+                              points="50,100 50,65"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="2"
+                            ></polyline>
+                            <polyline
+                              points="65,65 80,80 100,80"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="2"
+                            ></polyline>
+                          </g>
+                        </svg>
+                        <div className="card__chip-texture"></div>
+                      </div>
+                      <div className="card__type text-dark">Debit</div>
+                      <div className="card__number">
+                        <span className="card__digit-group text-dark">
+                          xxxx
+                        </span>
+                        <span className="card__digit-group text-dark">
+                          xxxx
+                        </span>
+                        <span className="card__digit-group text-dark">
+                          xxxx
+                        </span>
+                        <span className="card__digit-group text-dark">
+                          xxxx
+                        </span>
+                      </div>
+                      <div
+                        className="card__valid-thru text-dark"
+                        aria-label="Valid thru"
+                      >
+                        Valid<br></br>thru
+                      </div>
+                      <div className="card__exp-date">
+                        <time dateTime="2038-01">01/29</time>
+                      </div>
+                      <div className="card__name " aria-label="Dee Stroyer">
+                        Juan.c.gonzález
+                      </div>
+                      <div
+                        className="card__vendor"
+                        role="img"
+                        aria-labelledby="card-vendor"
+                      >
+                        <span id="card-vendor" className="card__vendor-sr">
+                          VISA
+                        </span>
+                      </div>
+                      <div className="card__texture"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="pt-2 pb-4 negro">
+                  <h5>Tarjetas</h5>
+                  <p className="fw-bold h3">Gasta donde y como quieras!</p>
+                </div>
+              </article>
+              <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-5">
+                <div className="py-2">
+                  <img
+                    src={contactless}
+                    alt="contactless mobile"
+                    className="img-fluid rounded-5 img-card"
+                  />
+                </div>
+
+                <div className="pt-2 pb-3 negro">
+                  <h5>En todas tus wallets</h5>
+                  <p className="fw-bold h3">Permitido olvidarse la billetera</p>
+                </div>
+              </article>
+              <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-5">
+                <div className="py-2">
+                  <img
+                    src={contactless}
+                    alt="contactless mobile"
+                    className="img-fluid rounded-5 img-card"
+                  />
+                </div>
+
+                <div className="pt-2 pb-3 negro">
+                  <h5>En todas tus wallets</h5>
+                  <p className="fw-bold h3">Permitido olvidarse la billetera</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </motion.div>
       </div>
+      <Footer/>
     </>
   );
 }

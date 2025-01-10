@@ -44,6 +44,7 @@ function Convert() {
           </label>
           <input
             type="text"
+            id="send"
             className="form-control d-inline px-2 "
             inputMode="decimal"
             placeholder="0"

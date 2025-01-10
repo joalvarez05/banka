@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@auth0/auth0-react": "^2.2.4",
     "@twicpics/components": "^0.31.1",
     "aos": "^2.3.4",
     "axios": "^1.7.9",
