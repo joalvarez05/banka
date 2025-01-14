@@ -1,3 +1,6 @@
+.fixed {
+  position: fixed;
+}
 .logo-brand {
   width: 2rem;
   height: 2rem;

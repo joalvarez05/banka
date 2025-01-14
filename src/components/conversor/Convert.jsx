@@ -35,7 +35,7 @@ function Convert() {
           1 USD = {cambio} EUR
         </p>
 
-        <div>
+        <div className="mx-4">
           <label
             htmlFor="send"
             className="form-label d-block fw-bold fs-5 text-center"
@@ -45,7 +45,7 @@ function Convert() {
           <input
             type="text"
             id="send"
-            className="form-control d-inline px-2 "
+            className="form-control d-inline px-2"
             inputMode="decimal"
             placeholder="0"
             onChange={handleChange}

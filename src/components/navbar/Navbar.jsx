@@ -7,11 +7,12 @@ import Register from "../registro/Registro";
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div className="container ">
           <a className="navbar-brand" href="#">
             <img src={logo} alt="logo de banka" className="logo-brand" />
           </a>
+
           <button
             className="navbar-toggler"
             type="button"

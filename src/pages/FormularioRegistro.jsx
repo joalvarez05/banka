@@ -62,7 +62,7 @@ function FormularioRegistro() {
                 required: true,
                 minLength: {
                   value: 3,
-                  message: "Tu nombre debe contener minimo 3 caracteres",
+                  message: "Tu nombre debe contener mínimo 3 caracteres",
                 },
                 maxLength: {
                   value: 40,

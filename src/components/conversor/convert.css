@@ -25,7 +25,7 @@
   animation-delay: -0.16s;
 }
 .tarjeta {
-  border-radius: 8px;
+  border-radius: 12px;
   margin-top: 15px;
   box-shadow: inset 0px 0px 22px 3px rgba(202, 202, 202, 0.366);
 }

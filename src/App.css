@@ -12,12 +12,13 @@
 :root {
   --color-blanco: #dbdbdb;
   --color-negro: #0d0d0d;
+  --color-morado0: #8a5bc394;
   --color-morado1: #7b52ae;
   --color-morado2: #653496;
   --color-verde: #70e000;
   --color-verde1: #88f26b;
   --color-verde2: #7ad95f;
-  --color-verde3: #34592a;
+  --color-verde3: #157347;
 }
 .blanco {
   color: var(--color-blanco) !important;
@@ -36,6 +37,9 @@
 }
 .verde3 {
   color: var(--color-verde3) !important;
+}
+.morado0 {
+  background-color: var(--color-morado0);
 }
 .morado1 {
   background-color: var(--color-morado1) !important;
@@ -70,7 +74,7 @@ input::placeholder {
 }
 
 .background-section {
-  background-color: var(--color-verde2);
+  background-color: #81ef6394;
   width: 100% !important;
   color: var(--color-negro);
 }
@@ -324,6 +328,7 @@ input::placeholder {
     display: none !important;
   }
 }
+
 /* Animaciones */
 @keyframes rotate_500 {
   from,
