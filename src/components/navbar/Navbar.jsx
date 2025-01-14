@@ -3,7 +3,7 @@ import "./navbar.css";
 import logo from "@/assets/img/logo64.png";
 import Login from "../login/Login";
 import Register from "../registro/Registro";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <>
@@ -95,7 +95,10 @@ function Navbar() {
             </ul>
             <div className="me-2 boton-sm">
               <Login />
-              <Register />
+              {/* <Link to="/registro">
+                <Register />
+              </Link> */}
+              <Register/>
             </div>
           </div>
         </div>

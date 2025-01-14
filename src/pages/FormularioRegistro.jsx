@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { formatDate } from "@/utils/formatDate";
 import Swal from "sweetalert2";
+import UsuarioNuevo from "@/utils/usuarioNuevo.js";
 
 function FormularioRegistro() {
   const [successRegister, setSuccessRegister] = useState(false);
@@ -19,14 +20,11 @@ function FormularioRegistro() {
   const onSubmit = (data) => {
     const usuariosExistentes =
       JSON.parse(localStorage.getItem("usuarios")) || [];
-    const usuariosActualizados = [...usuariosExistentes, data];
+    const nuevoUsuario = new UsuarioNuevo(data);
+    const usuariosActualizados = [...usuariosExistentes, nuevoUsuario];
 
     localStorage.setItem("usuarios", JSON.stringify(usuariosActualizados));
     setSuccessRegister(!successRegister);
-  };
-
-  const validarNumInput = (e) => {
-    e.target.value = e.target.value.replace(/[^0-9]/g, "");
   };
 
   useEffect(() => {
@@ -88,11 +86,14 @@ function FormularioRegistro() {
                 minLength: 3,
                 maxLength: 254,
                 pattern: {
-                  value: "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/",
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/,
                   message: "Ingresa un correo valido",
                 },
               })}
             />
+            {errors.email && (
+              <p className="fst-italic ">{errors.email.message}</p>
+            )}
           </div>
           <div>
             <label htmlFor="contrasena" className="form-label">
@@ -150,9 +151,12 @@ function FormularioRegistro() {
               pattern="[0-9]*"
               inputMode="numeric"
               id="dni"
-              onInput={validarNumInput}
               {...register("dni", {
                 required: true,
+                pattern: {
+                  value: /^[0-9]+$/,
+                  message: "Solo se permiten números",
+                },
                 minLength: {
                   value: 5,
                   message: "Tu DNI es demasiado corto",

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./convert.css";
-import fetchRates from "@/utils/changeCoins";
-import { cambioDolarAeuro } from "@/utils/changeCoins";
+import fetchRates from "@/utils/changeCoins.js";
+import { cambioDolarAeuro } from "@/utils/changeCoins.js";
+import currentDate from "@/utils/formatDate.js";
 
 function Convert() {
   const [rates, setRates] = useState(null);
@@ -25,8 +26,8 @@ function Convert() {
         <div className="bounce3"></div>
       </div>
     );
-  // if (error)
-  //   return <p>Error: en este momento no podemos procesar tu solicitud</p>;
+  if (error)
+    return <p>Error: en este momento no podemos procesar tu solicitud</p>;
 
   return (
     <div className="">
@@ -55,16 +56,28 @@ function Convert() {
           {input} USD = {cambioDolarAeuro(input)} EUR
         </p>
       </div>
-      {/* <h2>Tipos de Cambio </h2>
+      <h4 className="text-center">Tipo de Cambio al {currentDate()} </h4>
       {rates && (
-        <ul>
-          {Object.entries(rates.rates).map(([currency, rate]) => (
-            <li key={currency}>
-              {currency}: {rate}
-            </li>
-          ))}
-        </ul>
-      )} */}
+  <table className="table table-bordered">
+    <thead>
+      <tr>
+        <th>Moneda</th>
+        <th>1 USD</th>
+        <th>1 EUR</th>
+      </tr>
+    </thead>
+    <tbody>
+      {Object.entries(rates).map(([currency, rate]) => (
+        <tr key={currency}>
+          <td>{currency}</td>
+          <td>{currency === "USD" ? "1" : rate}</td>
+          <td>{currency === "EUR" ? "1" : rate}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+)}
+
     </div>
   );
 }

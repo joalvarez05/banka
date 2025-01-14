@@ -12,6 +12,7 @@ import brasil from "@/assets/img/brasil32.png";
 import chile from "@/assets/img/chile32.png";
 import peru from "@/assets/img/peru32.png";
 import colombia from "@/assets/img/colombia32.png";
+
 function Home() {
   const sectionRef1 = useRef(null);
   const sectionRef2 = useRef(null);
@@ -40,7 +41,7 @@ function Home() {
               </div>
 
               <div className="col-12 col-md-6 col-lg-6 py-4">
-                <Convert />
+                <Convert/>
               </div>
             </div>
           </div>
