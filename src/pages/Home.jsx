@@ -99,67 +99,6 @@ function Home() {
             </div>
           </section>
         </motion.div>
-        <motion.div
-          ref={sectionRef2}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView2 ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          <section className="py-5 background-section container-fluid">
-            <article className="row justify-content-center align-items-center ">
-              <div className="col-12 col-md-6 col-lg-6 my-4">
-                <h2 className="fw-bold ms-2 mt-2 mb-4">
-                  Decepcionar a los ladrones
-                </h2>
-                <p className="lead ms-2">
-                  Cada trimestre, nuestros clientes confían en nosotros para
-                  transferir más de 70.000 millones de pesos de su dinero. Estas
-                  son algunas de las formas importantes en que los protegemos.
-                </p>
-                <a href="#" className="btn btn-md py-2 morado2 mt-4">
-                  Cómo mantenemos su dinero seguro
-                </a>
-              </div>
-              <div className="col-12 col-md-6 col-lg-6 my-4 d-flex justify-content-center align-items-center">
-                <img
-                  src={lockLarge}
-                  alt="candado"
-                  loading="lazy"
-                  className="img-fluid w-50 "
-                />
-              </div>
-              <div className="container row">
-                <div className="col-12 col-md-12 col-lg-4 my-4 ">
-                  <div className="my-3">
-                    <i className="bi bi-lock fs-2 icono"></i>
-                  </div>
-                  <p className="lead">
-                    Nuestros equipos dedicados a la seguridad y el fraude
-                    trabajan para mantener su dinero seguro.
-                  </p>
-                </div>
-                <div className="col-12 col-md-12 col-lg-4 my-4 ">
-                  <div className="my-3">
-                    <i className="bi bi-shield-check fs-2 icono"></i>
-                  </div>
-                  <p className="lead">
-                    Utilizamos autenticación de dos factores para proteger su
-                    cuenta.
-                  </p>
-                </div>
-                <div className="col-12 col-md-12 col-lg-4 my-4 ">
-                  <div className="my-3">
-                    <i className="bi bi-bank2 fs-2 icono"></i>
-                  </div>
-                  <p className="lead">
-                    Guardamos su dinero en instituciones financieras
-                    establecidas.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </section>
-        </motion.div>
 
         <section className="py-5 container-fluid bg-section2">
           <div className="row gap-3 d-flex justify-content-center mx-2">
@@ -316,6 +255,67 @@ function Home() {
             </article>
           </div>
         </section>
+        <motion.div
+          ref={sectionRef2}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView2 ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <section className="py-5 background-section container-fluid">
+            <article className="row justify-content-center align-items-center ">
+              <div className="col-12 col-md-6 col-lg-6 my-4">
+                <h2 className="fw-bold ms-2 mt-2 mb-4">
+                  Decepcionar a los ladrones
+                </h2>
+                <p className="lead ms-2">
+                  Cada trimestre, nuestros clientes confían en nosotros para
+                  transferir más de 70.000 millones de pesos de su dinero. Estas
+                  son algunas de las formas importantes en que los protegemos.
+                </p>
+                <a href="#" className="btn btn-md py-2 morado2 mt-4">
+                  Cómo mantenemos su dinero seguro
+                </a>
+              </div>
+              <div className="col-12 col-md-6 col-lg-6 my-4 d-flex justify-content-center align-items-center">
+                <img
+                  src={lockLarge}
+                  alt="candado"
+                  loading="lazy"
+                  className="img-fluid w-50 "
+                />
+              </div>
+              <div className="container row">
+                <div className="col-12 col-md-12 col-lg-4 my-4 ">
+                  <div className="my-3">
+                    <i className="bi bi-lock fs-2 icono"></i>
+                  </div>
+                  <p className="lead">
+                    Nuestros equipos dedicados a la seguridad y el fraude
+                    trabajan para mantener su dinero seguro.
+                  </p>
+                </div>
+                <div className="col-12 col-md-12 col-lg-4 my-4 ">
+                  <div className="my-3">
+                    <i className="bi bi-shield-check fs-2 icono"></i>
+                  </div>
+                  <p className="lead">
+                    Utilizamos autenticación de dos factores para proteger su
+                    cuenta.
+                  </p>
+                </div>
+                <div className="col-12 col-md-12 col-lg-4 my-4 ">
+                  <div className="my-3">
+                    <i className="bi bi-bank2 fs-2 icono"></i>
+                  </div>
+                  <p className="lead">
+                    Guardamos su dinero en instituciones financieras
+                    establecidas.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </section>
+        </motion.div>
       </div>
       <h3 className="text-center">
         Países en los que opera <span className="verde1"> Banka </span>

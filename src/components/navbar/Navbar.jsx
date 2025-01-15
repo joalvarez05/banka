@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <nav
+        className="navbar navbar-expand-lg morado1
+ fixed-top"
+      >
         <div className="container ">
           <a className="navbar-brand" href="#">
             <img src={logo} alt="logo de banka" className="logo-brand" />
@@ -95,10 +98,10 @@ function Navbar() {
             </ul>
             <div className="me-2 boton-sm">
               <Login />
-              {/* <Link to="/registro">
+              <Link to="/registro">
                 <Register />
-              </Link> */}
-              <Register/>
+              </Link>
+              {/* <Register/> */}
             </div>
           </div>
         </div>
