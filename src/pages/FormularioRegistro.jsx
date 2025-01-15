@@ -226,13 +226,13 @@ function FormularioRegistro() {
           <br />
           <hr />
           <span>Al crear una cuenta, aceptas las </span>
-          <a href="#" title="Lee las Condiciones de Uso">
+          <Link to="/404" title="Lee las Condiciones de Uso">
             Condiciones de Uso
-          </a>
+          </Link>
           <span> y el </span>
-          <a href="#" title="Lee el Aviso de Privacidad">
+          <Link to="404" title="Lee el Aviso de Privacidad">
             Aviso de Privacidad
-          </a>
+          </Link>
           <span> de Banka.</span>
         </form>
       </div>

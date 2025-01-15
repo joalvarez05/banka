@@ -26,23 +26,21 @@ function Login() {
     const usuario = usuarios.find(
       (user) => user.email === data.email && user.contrasena === data.contrasena
     );
-
+    
     if (usuario) {
       setError("");
-      console.log(usuario);
 
-      // Actualizar el estado de usuarios
       const actualizarUsuario = usuarios.map((user) => {
         if (user.email === usuario.email) {
-          return { ...user, logeado: !user.logeado }; // Ponerlo como logeado
+          return { ...user, logeado: !user.logeado };
         }
         return user;
       });
 
-      // Guardar el arreglo actualizado en el localStorage
       localStorage.setItem("usuarios", JSON.stringify(actualizarUsuario));
 
-      setUsuarios(actualizarUsuario); // Actualizar el estado local
+      setUsuarios(actualizarUsuario);
+      setIsLogged(!isLogged);
 
       navigate(`/`);
     } else {
