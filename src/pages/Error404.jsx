@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import walletTravel from "@/assets/img/wallet-travel.webp";
+import { Helmet } from "react-helmet";
 function Error404() {
   return (
     <div>
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+        <title>Error 404 - Página no encontrada</title>
+      </Helmet>
       <header>
         <div className="text-center my-5">
           <img
