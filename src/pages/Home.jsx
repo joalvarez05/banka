@@ -4,15 +4,15 @@ import Convert from "@/components/conversor/Convert.jsx";
 import lockLarge from "@/assets/img/lockLarge.webp";
 import inversiones from "@/assets/img/inversiones.svg";
 import rendimiento35 from "@/assets/img/rendimiento35.webp";
-import creditCard from "@/assets/img/creditCardsm.jpg";
-import contactless from "@/assets/img/contactless.jpg";
+import creditCard from "@/assets/img/creditCardsm.webp";
+import contactless from "@/assets/img/contactless.webp";
 import Footer from "@/components/footer/Footer";
-import argentina32 from "@/assets/img/ars32.png";
-import brasil from "@/assets/img/brasil32.png";
-import chile from "@/assets/img/chile32.png";
-import peru from "@/assets/img/peru32.png";
-import colombia from "@/assets/img/colombia32.png";
-
+import argentina32 from "@/assets/img/ars32.webp";
+import brasil from "@/assets/img/brasil32.webp";
+import chile from "@/assets/img/chile32.webp";
+import peru from "@/assets/img/peru32.webp";
+import colombia from "@/assets/img/colombia32.webp";
+import section1 from "@/assets/img/section1.webp";
 function Home() {
   const sectionRef1 = useRef(null);
   const sectionRef2 = useRef(null);
@@ -23,7 +23,7 @@ function Home() {
   return (
     <>
       <div className="my-5">
-        <section className="py-5 morado0" id="sectionOne">
+        <section className="py-5 morado0 bg-section1" id="sectionOne">
           <div className="container">
             <div className="row justify-content-center align-items-center py-5">
               <div className="col-12 col-md-6 col-lg-6">
@@ -41,8 +41,15 @@ function Home() {
               </div>
 
               <div className="col-12 col-md-6 col-lg-6 py-4">
-                <Convert/>
+                <img
+                  src={section1}
+                  alt="Tu banco digital"
+                  className="img-fluid"
+                />
               </div>
+            </div>
+            <div className="d-flex justify-content-center">
+              <Convert />
             </div>
           </div>
         </section>
@@ -154,15 +161,15 @@ function Home() {
           </section>
         </motion.div>
 
-        <section className="py-5 container-fluid bg-success">
+        <section className="py-5 container-fluid bg-section2">
           <div className="row gap-3 d-flex justify-content-center mx-2">
-            <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-5">
+            <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-4 py-3">
               <div className="py-2">
                 <img
                   src={creditCard}
                   alt="credit card"
                   loading="lazy"
-                  className="img-fluid rounded-5 img-card"
+                  className="img-fluid rounded-3 img-card"
                 />
               </div>
               <div className="d-flex justify-content-center overlay">
@@ -277,12 +284,12 @@ function Home() {
                 <p className="fw-bold h3">Gasta donde y como quieras!</p>
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-5">
+            <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-4 py-3">
               <div className="py-2">
                 <img
                   src={contactless}
                   alt="contactless mobile"
-                  className="img-fluid rounded-5 img-card"
+                  className="img-fluid rounded-3 img-card"
                   loading="lazy"
                 />
               </div>
@@ -292,12 +299,12 @@ function Home() {
                 <p className="fw-bold h3">Permitido olvidarse la billetera</p>
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-5">
+            <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-4 py-3">
               <div className="py-2">
                 <img
                   src={contactless}
                   alt="contactless mobile"
-                  className="img-fluid rounded-5 img-card"
+                  className="img-fluid rounded-3 img-card"
                   loading="lazy"
                 />
               </div>
@@ -314,11 +321,11 @@ function Home() {
         Países en los que opera <span className="verde1"> Banka </span>
       </h3>
       <div className="d-flex justify-content-center gap-5 py-3">
-        <img src={argentina32} alt="Argentina" className="" />
-        <img src={brasil} alt="Brasil" className="" />
-        <img src={chile} alt="Chile" className="" />
-        <img src={peru} alt="Peru" className="" />
-        <img src={colombia} alt="Colombia" className="" />
+        <img src={argentina32} alt="Argentina" title="Argentina" />
+        <img src={brasil} alt="Brasil" title="Brasil" />
+        <img src={chile} alt="Chile" title="Chile" />
+        <img src={peru} alt="Peru" title="Peru" />
+        <img src={colombia} alt="Colombia" title="Colombia" />
       </div>
       <Footer />
       <div className="fixed-arrow">

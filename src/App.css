@@ -20,6 +20,12 @@
   --color-verde2: #7ad95f;
   --color-verde3: #157347;
 }
+.bg-section1 {
+  background: linear-gradient(0deg, #b8b8b8 0%, #7b52ae 81%);
+}
+.bg-section2 {
+  background: linear-gradient(0deg, #7b52ae 0%, #b8b8b8 81%);
+}
 .blanco {
   color: var(--color-blanco) !important;
 }
@@ -51,6 +57,7 @@
 body {
   font-family: "NeueMachina", sans-serif;
 }
+
 .sans-serif {
   font-family: sans-serif;
 }
