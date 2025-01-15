@@ -5,7 +5,7 @@ import lockLarge from "@/assets/img/lockLarge.webp";
 import inversiones from "@/assets/img/inversiones.svg";
 import rendimiento35 from "@/assets/img/rendimiento35.webp";
 import creditCard from "@/assets/img/creditCardsm.webp";
-import contactless from "@/assets/img/contactless.webp";
+import imgCard from "@/assets/img/img-card.jpg";
 import Footer from "@/components/footer/Footer";
 import argentina32 from "@/assets/img/ars32.webp";
 import brasil from "@/assets/img/brasil32.webp";
@@ -229,7 +229,7 @@ function Home() {
             <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-4 py-3">
               <div className="py-2">
                 <img
-                  src={contactless}
+                  src={imgCard}
                   alt="contactless mobile"
                   className="img-fluid rounded-3 img-card"
                   loading="lazy"
@@ -244,7 +244,7 @@ function Home() {
             <article className="col-12 col-md-6 col-lg-3 text-center position-relative tarjetas rounded-4 py-3">
               <div className="py-2">
                 <img
-                  src={contactless}
+                  src={imgCard}
                   alt="contactless mobile"
                   className="img-fluid rounded-3 img-card"
                   loading="lazy"
