@@ -3,7 +3,7 @@ import axios from "axios";
 const fetchRates = async (setRates, setError, setLoading) => {
   setLoading(true);
   const apiKey = import.meta.env.VITE_API_KEY;
-  // const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = import.meta.env.VITE_API_URL;
   try {
     const response = await axios.get(`${apiUrl}?api_key=${apiKey}`);
     const { ARS, BRL, CLP, EUR, USD } = response.data.rates;
