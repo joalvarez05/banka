@@ -47,6 +47,7 @@ function Home() {
                   alt="Tu banco digital"
                   title="Tu banco digital"
                   className="img-fluid"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -65,11 +66,12 @@ function Home() {
           <section className="py-5 container-fluid">
             <div className="justify-content-center align-items-center row">
               <div className="col-12 col-md-6 col-lg-6 position-relative">
-                <img src={inversiones} alt="slider" className="w-75" />
+                <img src={inversiones} alt="slider" className="w-75" loading="lazy"/>
                 <img
                   src={rendimiento35}
                   alt="rendimiento del 35%"
                   className="above-img"
+                  loading="lazy"
                 />
               </div>
               <div className="col-12 col-md-6 col-lg-6">
