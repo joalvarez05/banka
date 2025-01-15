@@ -1,8 +1,8 @@
 import React from "react";
 import "./navbar.css";
 import logo from "@/assets/img/logo64.webp";
-import Login from "../login/Login";
-import Register from "../registro/Registro";
+import BtnLogin from "@/components/btnLogin/BtnLogin";
+import Register from "@/components/registro/Registro";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
@@ -12,9 +12,9 @@ function Navbar() {
  fixed-top"
       >
         <div className="container ">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             <img src={logo} alt="logo de banka" className="logo-brand" />
-          </a>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -97,11 +97,12 @@ function Navbar() {
               </li>
             </ul>
             <div className="me-2 boton-sm">
-              <Login />
+              <Link to="/login">
+                <BtnLogin />
+              </Link>
               <Link to="/registro">
                 <Register />
               </Link>
-              {/* <Register/> */}
             </div>
           </div>
         </div>

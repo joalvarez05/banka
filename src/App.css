@@ -45,7 +45,7 @@
   color: var(--color-verde3) !important;
 }
 .morado0 {
-  background-color: var(--color-morado0);
+  background-color: var(--color-morado0) !important;
 }
 .morado1 {
   background-color: var(--color-morado1) !important;
@@ -58,6 +58,10 @@ body {
   font-family: "NeueMachina", sans-serif;
 }
 
+input::placeholder {
+  color: var(--color-verde2) !important;
+}
+
 .sans-serif {
   font-family: sans-serif;
 }
@@ -68,10 +72,6 @@ body {
   max-width: 350px;
   line-height: 1.6;
   word-wrap: break-word;
-}
-
-input::placeholder {
-  color: var(--color-verde2) !important;
 }
 
 /* Estilos del HOME */
@@ -330,12 +330,35 @@ input::placeholder {
   width: 300px;
   height: 250px;
 }
+
+.pad-register {
+  margin-top: 61px;
+}
+
+/* Estilos del login  */
+.form-check-input:checked {
+  background-color: var(--color-morado0) !important;
+}
+.borde-lg {
+  border-left: 1px solid rgba(156, 156, 156, 0.605);
+  height: 350px;
+}
+.form-control:focus {
+  box-shadow: 1px 1px 1px 0px var(--color-morado0);
+  border-color: var(--color-morado0);
+}
+
+
 @media (max-width: 576px) {
   .overlay {
     display: none !important;
   }
 }
-
+@media (max-width: 768px) {
+  .borde-lg {
+    border: none;
+  }
+}
 /* Animaciones */
 @keyframes rotate_500 {
   from,

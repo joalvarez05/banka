@@ -13,6 +13,7 @@ import chile from "@/assets/img/chile32.webp";
 import peru from "@/assets/img/peru32.webp";
 import colombia from "@/assets/img/colombia32.webp";
 import section1 from "@/assets/img/section1.webp";
+
 function Home() {
   const sectionRef1 = useRef(null);
   const sectionRef2 = useRef(null);
@@ -44,6 +45,7 @@ function Home() {
                 <img
                   src={section1}
                   alt="Tu banco digital"
+                  title="Tu banco digital"
                   className="img-fluid"
                 />
               </div>

@@ -3,8 +3,12 @@ import { useForm } from "react-hook-form";
 import { formatDate } from "@/utils/formatDate";
 import Swal from "sweetalert2";
 import UsuarioNuevo from "@/utils/usuarioNuevo.js";
+import { regexPassword } from "@/utils/regexPw";
+import { Link, useNavigate } from "react-router-dom";
 
 function FormularioRegistro() {
+  const navigate = useNavigate();
+
   const [successRegister, setSuccessRegister] = useState(false);
   const maxDate = formatDate();
 
@@ -13,9 +17,6 @@ function FormularioRegistro() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
-  const regexPassword =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,16}$/;
 
   const onSubmit = (data) => {
     const usuariosExistentes =
@@ -36,7 +37,7 @@ function FormularioRegistro() {
         confirmButtonText: "Home",
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.href = "/";
+          navigate("/");
         }
       });
     }
@@ -44,7 +45,7 @@ function FormularioRegistro() {
 
   return (
     <>
-      <div className="container d-flex justify-content-center align-items-center flex-column my-4">
+      <div className="container d-flex justify-content-center align-items-center flex-column pad-register pt-5">
         <h2>Crear cuenta</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
@@ -103,6 +104,7 @@ function FormularioRegistro() {
               className="form-control"
               type="password"
               id="contrasena"
+              required
               {...register("contrasena", {
                 required: true,
                 pattern: {
