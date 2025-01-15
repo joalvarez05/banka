@@ -347,11 +347,78 @@ input::placeholder {
   box-shadow: 1px 1px 1px 0px var(--color-morado0);
   border-color: var(--color-morado0);
 }
+/* Estilos error404 */
 
+.error_logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.error_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 10px;
+}
+
+.error_code {
+  width: 100%;
+  margin: 0 auto;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.error_code p {
+  font-size: 6rem;
+}
+
+.error_code p:first-of-type {
+  animation: fall 0.8s linear;
+  transform: rotateZ(-20deg);
+}
+
+.error_code p:last-of-type {
+  animation: fall 1s linear;
+  transform: rotateZ(8deg);
+}
+
+.error_code p:nth-of-type(2) {
+  color: var(--color2);
+  animation: bounce 0.4s 1.8s linear forwards;
+  opacity: 0;
+}
+
+.error_title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 0 3%;
+  text-align: center;
+}
+
+.error_description {
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.6;
+  padding: 0 10%;
+  color: var(--color1);
+}
+
+.action:hover {
+  opacity: 0.8;
+}
 
 @media (max-width: 576px) {
   .overlay {
     display: none !important;
+  }
+  .error_logo {
+    width: 70px;
+    height: 70px;
   }
 }
 @media (max-width: 768px) {
@@ -405,5 +472,38 @@ input::placeholder {
   }
   100% {
     transform: translate(-50%, -40%);
+  }
+}
+/* Animaciones page error404 */
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  40%,
+  75%,
+  95% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  15% {
+    transform: translateY(-25px);
+  }
+  65% {
+    transform: translateY(-15px);
+  }
+  85% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: rotateZ(45deg);
+    opacity: 1;
   }
 }

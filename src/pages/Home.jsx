@@ -13,6 +13,7 @@ import chile from "@/assets/img/chile32.webp";
 import peru from "@/assets/img/peru32.webp";
 import colombia from "@/assets/img/colombia32.webp";
 import section1 from "@/assets/img/section1.webp";
+import { Link } from "react-router-dom";
 
 function Home() {
   const sectionRef1 = useRef(null);
@@ -36,9 +37,9 @@ function Home() {
                   invierte y controla tus finanzas desde una app cómoda e
                   intuitiva.
                 </h2>
-                <a href="#" className="btn my-3 btn-md btn-success ">
+                <Link to="/registro" className="btn my-3 btn-md btn-success ">
                   Abrir una cuenta gratuita
-                </a>
+                </Link>
               </div>
 
               <div className="col-12 col-md-6 col-lg-6 py-4">
@@ -93,9 +94,9 @@ function Home() {
                   ¡Automaticamente!.
                 </p>
                 <div className="text-center mt-5">
-                  <a href="https://google.com" className="btn btn-lg morado2">
+                  <Link to="/error404" className="btn btn-lg morado2">
                     Saber más <i className="bi bi-chevron-right"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -323,11 +324,16 @@ function Home() {
         Países en los que opera <span className="verde1"> Banka </span>
       </h3>
       <div className="d-flex justify-content-center gap-5 py-3">
-        <img src={argentina32} alt="Argentina" title="Argentina" />
-        <img src={brasil} alt="Brasil" title="Brasil" />
-        <img src={chile} alt="Chile" title="Chile" />
-        <img src={peru} alt="Peru" title="Peru" />
-        <img src={colombia} alt="Colombia" title="Colombia" />
+        <img
+          loading="lazy"
+          src={argentina32}
+          alt="Argentina"
+          title="Argentina"
+        />
+        <img loading="lazy" src={brasil} alt="Brasil" title="Brasil" />
+        <img loading="lazy" src={chile} alt="Chile" title="Chile" />
+        <img loading="lazy" src={peru} alt="Peru" title="Peru" />
+        <img loading="lazy" src={colombia} alt="Colombia" title="Colombia" />
       </div>
       <Footer />
       <div className="fixed-arrow">
