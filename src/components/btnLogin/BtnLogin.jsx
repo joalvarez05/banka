@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 function Login() {
   return (
     <>
-      <a
-        href="./iniciarSesion"
-        className="button morado2 link-underline-opacity-0 link-offset-2 link-underline w-equal"
-      >
+      <span>
         Iniciar sesión
         <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
           <path
@@ -16,7 +13,7 @@ function Login() {
             clipRule="evenodd"
           ></path>
         </svg>
-      </a>
+      </span>
     </>
   );
 }

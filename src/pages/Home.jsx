@@ -84,7 +84,7 @@ function Home() {
                   directamente desde tu app Banka. Invierte en acciones y{" "}
                   <a
                     href="https://www.modocripto.es/blog/"
-                    className="ink-offset-2 link-underline link-underline-opacity-0 verde2"
+                    className="link-offset-2 link-underline link-underline-opacity-0 verde2"
                     target="_blank"
                   >
                     criptomonedas****

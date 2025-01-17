@@ -97,10 +97,10 @@ function Navbar() {
               </li>
             </ul>
             <div className="me-2 boton-sm">
-              <Link to="/login">
+              <Link to="/login" className="button ms-1">
                 <BtnLogin />
               </Link>
-              <Link to="/registro">
+              <Link to="/registro" className="button ms-1 ">
                 <Register />
               </Link>
             </div>

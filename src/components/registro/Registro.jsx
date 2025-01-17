@@ -4,10 +4,7 @@ import React from "react";
 function Register() {
   return (
     <>
-      <a
-        href="/FormularioRegistro"
-        className="button blanco link-underline-opacity-0 link-offset-2 link-underline w-equal"
-      >
+      <span>
         Regístrate ahora
         <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
           <path
@@ -16,7 +13,7 @@ function Register() {
             clipRule="evenodd"
           ></path>
         </svg>
-      </a>
+      </span>
     </>
   );
 }

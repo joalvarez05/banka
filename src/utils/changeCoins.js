@@ -6,6 +6,7 @@ const fetchRates = async (setRates, setError, setLoading) => {
   const apiUrl = import.meta.env.VITE_API_URL;
   try {
     const response = await axios.get(`${apiUrl}?api_key=${apiKey}`);
+    console.log(response);
     const { ARS, BRL, CLP, EUR, USD } = response.data.rates;
     const monedasRedondeadas = {
       ARS: parseFloat(ARS.toFixed(2)),
@@ -21,8 +22,6 @@ const fetchRates = async (setRates, setError, setLoading) => {
   } finally {
     setLoading(false);
   }
-
-  
 };
 
 export default fetchRates;
